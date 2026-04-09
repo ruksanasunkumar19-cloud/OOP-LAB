@@ -1,0 +1,34 @@
+abstract class Vehicle {
+    
+    abstract void start();   // abstract method
+
+    void fuel(){             // normal method
+        System.out.println("Vehicle uses fuel");
+    }
+}
+
+class Car extends Vehicle {
+    void start(){
+        System.out.println("Car starts with key");
+    }
+}
+
+class Bike extends Vehicle {
+    void start(){
+        System.out.println("Bike starts with kick");
+    }
+}
+
+public class HalfAbstraction {
+    public static void main(String[] args){
+        Vehicle v;
+
+        v = new Car();
+        v.fuel();
+        v.start();
+
+        v = new Bike();
+        v.fuel();
+        v.start();
+    }
+}
